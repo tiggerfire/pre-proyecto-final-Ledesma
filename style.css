@@ -1,12 +1,14 @@
 * {
   font-family: "Montserrat", sans-serif;
+
   margin: auto 0px;
+  padding: 0px;
 }
 
 :root {
-  --color-azul-del-fondo: #181c30;
-  --color-crema-beige: #e6ddc4;
-  --color-sombra-verde: #678983;
+  --color-azul-del-fondo: rgb(24, 28, 48);
+  --color-crema-beige: rgb(230, 221, 196);
+  --color-sombra-verde: rgb(103, 137, 131);
 }
 
 .body {
@@ -43,12 +45,82 @@ nav {
   font-weight: 300;
 }
 
+.item-menu:active {
+  transform: translate(3px, 2px);
+}
+.item-menu:active > .item-link {
+  box-shadow: 0px 0px;
+}
+
+/* logo */
+
+#monitor-exterior,
+#teclado-exterior {
+  animation: abajo ease-in 5s;
+  animation-iteration-count: 1;
+}
+
+#monitor-interior,
+#teclado-interior,
+#ojos {
+  animation: arriba ease-in 5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes abajo {
+  0% {
+    transform: translate(0, -10px);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(0, -10px);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes arriba {
+  0% {
+    transform: translate(0, -10px);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(0, -10px);
+    opacity: 0;
+  }
+  40% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
 /* header */
 
 header {
-  background: url(./imagenes/codigo.jpg);
+  background: url(./imagenes/codigo.jpg) 50% 0 fixed;
   background-size: cover;
-  min-height: 500px;
+  min-height: 88vh;
   color: rgb(238, 238, 238);
   font-size: 28px;
   display: flex;
@@ -62,19 +134,20 @@ header {
 }
 
 h1 {
-  text-shadow: 2px 2px gray, 6px 6px black;
+  text-shadow: 2px 2px rgb(128, 128, 128), 6px 6px rgb(0, 0, 0);
 }
 
 h2 {
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px rgb(0, 0, 0);
   font-size: 40px;
   text-align: center;
   color: var(--color-sombra-verde);
 }
+
 /* main */
 
 main {
-  padding: 100px 20px;
+  padding: 100px 0.2px;
 }
 
 .container-main {
@@ -118,7 +191,12 @@ main {
   text-decoration: none;
   width: 40%;
   margin-bottom: 20px;
-  color: #f0f5e4;
+  color: rgb(240, 245, 228);
+}
+
+.boton-cards:active {
+  box-shadow: 0px 0px darkgray;
+  transform: translate(3px, 2px);
 }
 
 /* footer */
@@ -182,7 +260,7 @@ div {
 .video-historia {
   padding: 5px;
   background-color: black;
-  width: 70%;
+  width: 50%;
 }
 
 .barra-reproductora {
@@ -203,13 +281,19 @@ div {
   width: 80px;
 }
 
-.botones-video {
+.botones-video,
+.boton-reinicio {
   box-shadow: 2px 3px var(--color-sombra-verde);
   border-radius: 10px;
   padding: 10px;
   background-color: var(--color-crema-beige);
   color: rgb(24, 29, 49);
   font-weight: 300;
+}
+
+.botones-video:active {
+  box-shadow: 0px 0px darkgray;
+  transform: translate(3px, 2px);
 }
 
 /* page juguemos */
@@ -220,31 +304,43 @@ div {
   align-items: center;
 }
 
-.cajas {
+.partes {
   display: flex;
   flex-direction: row;
 }
 
-.caja {
+.parte {
   width: 275px;
   height: 400px;
   display: flex;
-  border: 2px solid black;
-  background-color: grey;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(128, 128, 128);
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 
-#cajas-imagenes {
+#partes-imagenes {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin: 40px;
 }
 
+.parte:hover {
+  background-color: #1d1d1d;
+}
+.parte:hover > p {
+  color: rgb(230, 221, 196);
+}
+
 .reiniciar {
   display: flex;
   margin: auto;
   padding: 10px 100px;
+}
+
+.boton-reinicio:active {
+  box-shadow: 0px 0px rgb(169, 169, 169);
+  transform: translate(3px, 2px);
 }

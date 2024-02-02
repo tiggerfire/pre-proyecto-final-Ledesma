@@ -13,7 +13,16 @@
 <body class="body">
   <nav>
     <a href="index.html">
-      <svg width="200" height="80">Inicio</svg>
+      <svg width="200" height="80">
+        <rect id="monitor-exterior" x="45" y="5" width="60" height="35" rx="5" fill="#F0E9D2"></rect>
+        <rect id="monitor-interior" x="50" y="10" width="50" height="25" rx="5" fill="#495579"></rect>
+        <circle id="ojos" cx="90" cy="20" r="3" fill="#ffffff"></circle>
+        <circle id="ojos" cx="60" cy="20" r="3" fill="#ffffff"></circle>
+        <!-- <polyline points="40 40,90 40,60 90" fill="#fffff" stokewidth="3"></polyline> -->
+
+        <polygon id="teclado-exterior" points="55 45 ,95 45,115 62,30 62" fill="#F0E9D2"></polygon>
+        <polygon id="teclado-interior" points="57 48 ,92 48,104 58,43 58" fill="#495579"></polygon>
+      </svg>
     </a>
     <ul class="menu">
       <li class="item-menu">
@@ -30,24 +39,24 @@
   <main>
     <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
     <section class="juego">
-      <div class="cajas">
-        <div class="caja">
+      <div class="partes">
+        <div class="parte">
           <p>Arrastre y suelte la imágene aquí</p>
         </div>
-        <div class="caja">
+        <div class="parte">
           <p>Arrastre y suelte la imágene aquí</p>
         </div>
-        <div class="caja">
+        <div class="parte">
           <p>Arrastre y suelte la imágene aquí</p>
         </div>
       </div>
-      <div id="cajas-imagenes">
+      <div id="partes-imagenes">
         <img src="./imagenes/rompe2.png" alt="">
         <img src="./imagenes/Rompe1.png" alt="">
         <img src="./imagenes/Rompe3.png" alt="">
       </div>
     </section>
-    <button class="botones-video reiniciar">Reiniciar</button>
+    <button class="boton-reinicio reiniciar">Reiniciar</button>
   </main>
 </body>
 
