@@ -40,24 +40,26 @@
     <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
     <section class="juego">
       <div class="partes">
-        <div class="parte">
+        <div class="parte" id="soltar-1">
           <p>Arrastre y suelte la imágene aquí</p>
         </div>
-        <div class="parte">
+        <div class="parte" id="soltar-2">
           <p>Arrastre y suelte la imágene aquí</p>
         </div>
-        <div class="parte">
+        <div class="parte" id="soltar-3">
           <p>Arrastre y suelte la imágene aquí</p>
         </div>
       </div>
       <div id="partes-imagenes">
-        <img src="./imagenes/rompe2.png" alt="">
-        <img src="./imagenes/Rompe1.png" alt="">
-        <img src="./imagenes/Rompe3.png" alt="">
+        <img id="pieza-1" src="./imagenes/rompe2.png" alt="">
+        <img id="pieza-2" src="./imagenes/Rompe1.png" alt="">
+        <img id="pieza-3" src="./imagenes/Rompe3.png" alt="">
       </div>
     </section>
-    <button class="boton-reinicio reiniciar">Reiniciar</button>
+    <button onclick="reniciar()" class="boton-reinicio reiniciar">Reiniciar</button>
   </main>
+
+  <script src="./puzzle.js"></script>
 </body>
 
 </html>
