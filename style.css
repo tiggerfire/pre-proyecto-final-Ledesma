@@ -226,11 +226,13 @@ footer {
 }
 /* page historia */
 
-.container-history {
+.container-history,
+.container-video {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 100px 0px;
 }
 
 .cards-history {
@@ -247,14 +249,6 @@ footer {
 
 div {
   display: block;
-}
-
-.container-video {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 0px;
 }
 
 .video-historia {
@@ -292,7 +286,7 @@ div {
 }
 
 .botones-video:active {
-  box-shadow: 0px 0px darkgray;
+  box-shadow: 0px 0px rgb(169, 169, 169);
   transform: translate(3px, 2px);
 }
 
@@ -328,7 +322,7 @@ div {
 }
 
 .parte:hover {
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
 }
 .parte:hover > p {
   color: rgb(230, 221, 196);
