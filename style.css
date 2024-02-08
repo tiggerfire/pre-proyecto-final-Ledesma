@@ -253,12 +253,12 @@ div {
 
 .video-historia {
   padding: 5px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   width: 50%;
 }
 
 .barra-reproductora {
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
   border-radius: 10px;
   padding: 20px 5px;
   display: flex;
